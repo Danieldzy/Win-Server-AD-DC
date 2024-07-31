@@ -2,8 +2,8 @@
 
 <h2>Overview</h2>
 
-Part 1: Create new users (_USERS OU) in Active Directory. Connect Windows 11 client machine to Windows Server 2022 DC and access to internet
-Part 2: TBD
+Part 1: Create new users (_USERS OU) in Active Directory. Connect Windows 11 client machine to Windows Server 2022 DC and access to internet</b> 
+Part 2: TBD</b> 
 
 <h2>Part 1</h2>
 The project involves two virtual machines: Windows Server 2022 with two NIC (  ) and Windows 11 (Internal network access the internet using WIN server DC). 
