@@ -62,7 +62,7 @@ New-ADOrganizationalUnit: This cmdlet is used to create a new Organizational Uni
 <br />This PowerShell code is starting to split each name in $USER_FIRST_LAST_LIST into first and last names, converting the first name to lowercase. It uses a space " " to separate first and last name.
 
 <br />$username = "$($first.Substring(0,1)$last)".Tolower()
-<br />This line of PowerShell code is used to create a username by combining the first initial of the first name with the full last name, and then converting the entire username to lowercase. If the name is John Doe, then it will become 'jdoe' and stored in the username variable<br />
+<br />This line of PowerShell code is used to create a username by combining the first initial of the first name with the full last name, and then converting the entire username to lowercase. If the name is John Doe, then it will become 'jdoe' and be stored in the username variable<br />
 <br />Write-Host "Creating user: $username" -BackgroundColor Black -ForegroundColor Cyan<br />
 Each time the user has been created when running the script, a message Creating user: xxx will be printed out.<br />
 
@@ -76,5 +76,8 @@ Each time the user has been created when running the script, a message Creating 
 
 <br />Next we run the script, you need to run this PowerShell inside the same directory where the name.txt is stored since it will pull all the information from name.txt. Or you will have to define another $file_path variable to target the name.txt file. <br />
 <img src="https://imgur.com/JczTrHu.png" height="80%" width="80%" alt="Add New Host"/>
-<br />When the scripts runs, you can see it has printed out the "Creating user:xxx" message,and going to Active Directory User and Computers GUI, you will see the new OU _USERS has been created and all the new users has been created.<br />
+<br />When the scripts runs, you can see it has printed out the "Creating user:xxx" message, and going to Active Directory User and Computers GUI, you will see the new OU _USERS has been created and all the new users has been created.<br />
 <img src="https://imgur.com/CLO6Ejd.png" height="80%" width="80%" alt="Add New Host"/>
+
+
+<br />Now, we will connect our Windows 11 machine to our domain, establishing a simulated enterprise network management environment. Note that the Windows 11 VM cannot be Home Edition, as it does not support joining an Active Directory Domain.<br />
