@@ -55,3 +55,10 @@ New-ADOrganizationalUnit: This cmdlet is used to create a new Organizational Uni
 <br /> Now let us delve into the second part of the scripts, the for loop<br />
 <img src="https://imgur.com/azpPcer.png" height="80%" width="80%" alt="Add New Host"/>
 
+<br />foreach ($n in $USER_FIRST_LAST_LIST) {
+    <br />$first = $n.Split(" ")[0].ToLower()
+    <br />$last = $n.Split(" ")[1].ToLower()<br />
+<br />This PowerShell code is starting to split each name in $USER_FIRST_LAST_LIST into first and last names, converting the first name to lowercase. It uses a space " " to separate first and last name.
+
+<br />$username = "$($first.Substring(0,1))$($last)".ToLower()<br />
+<br />This line of PowerShell code is used to create a username by combining the first initial of the first name with the full last name, and then converting the entire username to lowercase. If the name is John Doe, then it will become 'jdoe' and stored in the username variable
