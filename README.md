@@ -1,11 +1,12 @@
 <h1>Windows Server Active Directory Management</h1>
 
-<h2>Considerations</h2>
+<h2>Overview</h2>
 
-Conducting 
+Part 1: Create new users (_USERS OU) in Active Directory. Connect Windows 11 client machine to Windows Server 2022 DC and access to internet
+Part 2: TBD
 
-<h2>Description</h2>
-The project involves two virtual machines: Windows Server 2022 with two NIC (  ) and Windows 11 (with the IP address 10.0.2.15). 
+<h2>Part 1</h2>
+The project involves two virtual machines: Windows Server 2022 with two NIC (  ) and Windows 11 (Internal network access the internet using WIN server DC). 
 <br />
 
 
@@ -60,5 +61,20 @@ New-ADOrganizationalUnit: This cmdlet is used to create a new Organizational Uni
     <br />$last = $n.Split(" ")[1].ToLower()<br />
 <br />This PowerShell code is starting to split each name in $USER_FIRST_LAST_LIST into first and last names, converting the first name to lowercase. It uses a space " " to separate first and last name.
 
-<br />$username = "$($first.Substring(0,1))$($last)".ToLower()<br />
-<br />This line of PowerShell code is used to create a username by combining the first initial of the first name with the full last name, and then converting the entire username to lowercase. If the name is John Doe, then it will become 'jdoe' and stored in the username variable
+<br />$username = "$($first.Substring(0,1)$last)".Tolower()
+<br />This line of PowerShell code is used to create a username by combining the first initial of the first name with the full last name, and then converting the entire username to lowercase. If the name is John Doe, then it will become 'jdoe' and stored in the username variable<br />
+<br />Write-Host "Creating user: $username" -BackgroundColor Black -ForegroundColor Cyan<br />
+Each time the user has been created when running the script, a message Creating user: xxx will be printed out.<br />
+
+
+<br />Last part of the script<br />
+<img src="https://imgur.com/LwoCrqn.png" height="80%" width="80%" alt="Add New Host"/>
+<br />This part creates a new user and uses the variable we defined earlier to assign to the required field. <br />
+<br />-PasswordNeverExpires $true: Specifies that the password for the user will never expire. In real work environment, you want to set it to false to implement more strict password policy<br />
+<br />-Path "ou=_USERS,$(([ADSI]"").distinguishedName)": Sets the path in AD where the user will be created. This concatenates the organizational unit _USERS` with the distinguished name of the domain.<br />
+<br />-Enabled $true: Enables the user account upon creation.<br />
+
+<br />Next we run the script, you need to run this PowerShell inside the same directory where the name.txt is stored since it will pull all the information from name.txt. Or you will have to define another $file_path variable to target the name.txt file. <br />
+<img src="https://imgur.com/JczTrHu.png" height="80%" width="80%" alt="Add New Host"/>
+<br />When the scripts runs, you can see it has printed out the "Creating user:xxx" message,and going to Active Directory User and Computers GUI, you will see the new OU _USERS has been created and all the new users has been created.<br />
+<img src="https://imgur.com/CLO6Ejd.png" height="80%" width="80%" alt="Add New Host"/>
