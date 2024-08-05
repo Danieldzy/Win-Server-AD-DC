@@ -38,7 +38,9 @@ Diagram 2: <br/>
 <img src="https://imgur.com/XHH8omh.png" height="80%" width="80%" alt="Add Credential"/>
 
 
-<br/>The services we have on our Windows Server 2022 DC server manager: <br/>1, AD DC used to create users and Domain controller.<br/> <br/> 2, DHCP with router function enabled to auto assign IP address to Win11 workstation.<br/>
+<br/>The services we have on our Windows Server 2022 DC server manager: 
+<br/>1, AD DC to create our FQDN (incdomain.com) and promote it to Domain Controller(DC), then we can use PowerShell to create users.<br/> 
+<br/> 2, DHCP with router function enabled to auto assign IP address to Win11 workstation.<br/>
 <br/>3, Remote Access Services (RAS) with NAT (Network Address Translation) enabled. Facilitates the connection of multiple devices on a local network to the internet using a single public IP address. With this feature installed, our Windows 11 Workstation can communicate with the Internet through our Windows Server 2022 DC.<br/>
 <img src="https://imgur.com/B8q0o09.png" height="80%" width="80%" alt="Add Credential"/>
 
