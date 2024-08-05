@@ -2,7 +2,7 @@
 
 <h2>Overview</h2>
 
-Part 1: Create new users (_USERS OU) in Active Directory. Connect Windows 11 Workstation to Windows Server 2022 DC and access to the Internet, simulate a real enterprise environment<br/>
+Part 1: Create new users (_USERS OU) in Active Directory. Connect Windows 11 Workstation to Windows Server 2022 Domain Controller(DC) and access to the Internet, simulate a real enterprise environment<br/>
 Part 2: TBD<br/>
 
 <h2>Part 1</h2>
@@ -29,7 +29,8 @@ The Diagram: <br/>
 
 
 
-<br/>The services we have on our Windows Server 2022 server manager: Remote Access Services (RAS) on Windows Server 2022 provides numerous benefits, especially for enterprises looking to manage network resources efficiently and provide secure remote connectivity: <br/>
+<br/>The services we have on our Windows Server 2022 DC server manager: <br/>AD DC used to create users and Domain controller.<br/> <br/> DHCP with router function enabled to auto assign IP address to Win11 workstation.<br/>
+<br/>Remote Access Services (RAS) on Windows Server 2022 provides numerous benefits, especially for enterprises looking to manage network resources efficiently and provide secure remote connectivity: <br/>
 <br/>1, Windows Server 2022 supports VPN solutions like SSTP, PPTP, L2TP, and IKEv2. VPNs provide secure encrypted connections for remote users to access internal network resources from anywhere, ensuring data integrity and confidentiality.<br/>
 <br/>2, NAT (Network Address Translation) Facilitates the connection of multiple devices on a local network to the internet using a single public IP address, conserving address space and enhancing security by masking internal IP addresses. With this feature installed, our Windows 11 VM can communicate with the internet through our Windows Server 2022.<br/>
 <br/>3, Remote Access Services can provide advanced routing capabilities, enabling the server to manage network traffic efficiently. This is especially useful for multi-site enterprises where traffic needs to be directed appropriately.<br/>
