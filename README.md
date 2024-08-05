@@ -7,15 +7,12 @@ In a home lab environment, however, we have assigned two NICs to the DC (one int
 
 <p align="center">
 Diagram 1: <br/>
+<br/>
 <img src="https://imgur.com/Ph2loLY.png" height="80%" width="80%" alt=""/>
 
+
 <h2>Overview</h2>
-
-Part 1: Create new users (_USERS OU) in Active Directory. Connect Windows 11 Workstation to Windows Server 2022 Domain Controller(DC) and access to the Internet, simulate a real enterprise environment<br/>
-Part 2: TBD<br/>
-
-<h2>Part 1</h2>
-The project involves two virtual machines: Windows Server 2022 (DC) with two NICs (NIC one: 10.0.2.15 DHCP to Internet. NIC two: 172.16.0.1 Static assigned) and Windows 11 (Internal network access to the Internet through DC RAS NAT configured). 
+The project involves two virtual machines: Windows Server 2022 (DC) with two NICs (NIC one: 10.0.2.15 DHCP to Internet. NIC two: 172.16.0.1 Static assigned) and Windows 11 (Internal network access to the Internet through DC RAS NAT configured).  Later we create new users (_USERS OU) in Active Directory. Connect Windows 11 Workstation to Windows Server 2022 Domain Controller(DC) and access to the Internet.<br/>
 <br />
 
 
@@ -34,7 +31,8 @@ The project involves two virtual machines: Windows Server 2022 (DC) with two NIC
 
 <p align="center">
 Diagram 2: <br/>
-<img src="https://imgur.com/ZSEAZFf.png" height="80%" width="80%" alt=""/>
+<br/>
+<br/><img src="https://imgur.com/ZSEAZFf.png" height="80%" width="80%" alt=""/>
 
 <br/>First, in VirtualBox VM settings, select network, and ensure Win Server DC VM Internal NIC(adapter) and Win11 workstation VM adapter are in the same Internal network and have the same name(intnet in this case).<br/>
 <img src="https://imgur.com/XHH8omh.png" height="80%" width="80%" alt="Add Credential"/>
