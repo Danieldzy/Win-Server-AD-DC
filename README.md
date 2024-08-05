@@ -44,6 +44,17 @@ Diagram 2: <br/>
 <br/>3, Remote Access Services (RAS) with NAT (Network Address Translation) enabled. Facilitates the connection of multiple devices on a local network to the internet using a single public IP address. With this feature installed, our Windows 11 Workstation can communicate with the Internet through our Windows Server 2022 DC.<br/>
 <img src="https://imgur.com/B8q0o09.png" height="80%" width="80%" alt="Add Credential"/>
 
+
+<br />Install Active Domain services in Server Manager (use Add roles and features), add new Organization Units (OU) named ADMINS, Inside this OU, add a new user as the administrator. You will also need to promote this machine as Domain Controller after installation:<br />
+<img src="https://imgur.com/Bx4FBUT.png" height="80%" width="80%" alt="Add New Host"/>
+
+<br />Install DHCP services in Server Manager (use Add roles and features). Your will also need to enable the Router function from DHCP service, go to Server options and select 003 Router then finish the Wizard and reboot Server Manager:<br />
+<img src="https://imgur.com/CJgGmUh.png" height="80%" width="80%" alt="Add New Host"/>
+
+<br />Install RAS(Remote access) services in Server Manager (use Add roles and features). Choose NAT(Network Address Translation), Make sure to select the DHCP NIC to finish the Wizard, so our workstation(Win11) can access the internet:<br />
+<img src="https://imgur.com/Nq6Jo59.png" height="80%" width="80%" alt="Add New Host"/>
+
+
 <br />PowerShell script for create users walk-through:<br />
 <img src="https://imgur.com/azpPcer.png" height="80%" width="80%" alt="Add New Host"/>
 <br />$PASSWORD_FOR_USERS = "Password1"<br />
