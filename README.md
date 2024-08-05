@@ -27,7 +27,7 @@ The project involves two virtual machines: Windows Server 2022 (DC) with two NIC
 The Diagram: <br/>
 <img src="https://imgur.com/ZSEAZFf.png" height="80%" width="80%" alt=""/>
 
-<br/>First, in VirtualBox VM settings, select network, and ensure Win Server DC VM 2nd adapter and Win11 workstation VM adapter are in the same Internal network and have the same name(intnet in this case).<br/>
+<br/>First, in VirtualBox VM settings, select network, and ensure Win Server DC VM Internal NIC(adapter) and Win11 workstation VM adapter are in the same Internal network and have the same name(intnet in this case).<br/>
 <img src="https://imgur.com/XHH8omh.png" height="80%" width="80%" alt="Add Credential"/>
 
 
@@ -79,4 +79,6 @@ Each time the user has been created when running the script, a message Creating 
 <img src="https://imgur.com/CLO6Ejd.png" height="80%" width="80%" alt="Add New Host"/>
 
 
-<br />Now, we will connect our Windows 11 machine to our domain, establishing a simulated enterprise network management environment. Note that the Windows 11 VM cannot be Home Edition, as it does not support joining an Active Directory Domain.<br />
+<br />Now, we will connect our Windows 11 machine to our domain, establishing a simulated enterprise network management environment. Note that the Windows 11 Workstation VM cannot be Home Edition, as it does not support joining an Active Directory Domain.<br />
+<br />After booting up the Win11 Workstation, go to Network Connections and set the IPv4 to DHCP, since this workstation is in the same internal network as our Windows Server DC (We set it up at the beginning), it will automatically get the first IP address from our Windows Server DC DHCP scope which is 172.16.0.100. From there, you can ping our DC and www.google.com, it will get the response.<br />
+<img src="https://imgur.com/aPoK1ek.png" height="80%" width="80%" alt="Add New Host"/>
