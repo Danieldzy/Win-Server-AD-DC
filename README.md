@@ -17,8 +17,8 @@ The project involves two virtual machines: Windows Server 2022 (DC) with two NIC
 
 <h2>Environments Used </h2>
 
-- <b>Windows Server 2022</b> 
-- <b>Windows 11</b> 
+- <b>Windows Server 2022 (DC)</b> 
+- <b>Windows 11 (Workstation)</b> 
 
 <h2>Program walk-through:</h2>
 
@@ -27,10 +27,12 @@ The project involves two virtual machines: Windows Server 2022 (DC) with two NIC
 The Diagram: <br/>
 <img src="https://imgur.com/Ud28rlo.png" height="80%" width="80%" alt=""/>
 
+<br/>First, in VirtualBox VM settings, select network, and ensure Win Server DC VM 2nd adapter and Win11 workstation VM adapter are in the same Internal network and have the same name(intnet in this case).<br/>
+<img src="https://imgur.com/XHH8omh.png" height="80%" width="80%" alt="Add Credential"/>
 
 
-<br/>The services we have on our Windows Server 2022 DC server manager: <br/>AD DC used to create users and Domain controller.<br/> <br/> DHCP with router function enabled to auto assign IP address to Win11 workstation.<br/>
-<br/>Remote Access Services (RAS) with NAT (Network Address Translation) enabled. Facilitates the connection of multiple devices on a local network to the internet using a single public IP address, conserving address space and enhancing security by masking internal IP addresses. With this feature installed, our Windows 11 Workstation can communicate with the Internet through our Windows Server 2022 DC.<br/>
+<br/>The services we have on our Windows Server 2022 DC server manager: <br/>1, AD DC used to create users and Domain controller.<br/> <br/> 2, DHCP with router function enabled to auto assign IP address to Win11 workstation.<br/>
+<br/>3, Remote Access Services (RAS) with NAT (Network Address Translation) enabled. Facilitates the connection of multiple devices on a local network to the internet using a single public IP address. With this feature installed, our Windows 11 Workstation can communicate with the Internet through our Windows Server 2022 DC.<br/>
 <img src="https://imgur.com/B8q0o09.png" height="80%" width="80%" alt="Add Credential"/>
 
 <br />PowerShell script for create users walk-through:<br />
