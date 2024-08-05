@@ -2,7 +2,7 @@
 
 <h2>Overview</h2>
 
-Part 1: Create new users (_USERS OU) in Active Directory. Connect Windows 11 client machine to Windows Server 2022 DC and access to internet<br/>
+Part 1: Create new users (_USERS OU) in Active Directory. Connect Windows 11 Workstation to Windows Server 2022 DC and access to the Internet, simulate a real enterprise environment<br/>
 Part 2: TBD<br/>
 
 <h2>Part 1</h2>
