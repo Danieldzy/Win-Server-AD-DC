@@ -32,7 +32,7 @@ The project involves two virtual machines: Windows Server 2022 (DC) with two NIC
 <p align="center">
 Diagram 2: <br/>
 <br/>
-<br/><img src="https://imgur.com/ZSEAZFf.png" height="80%" width="80%" alt=""/>
+<br/><img src="https://imgur.com/pDM6OOQ.png" height="80%" width="80%" alt=""/>
 
 <br/>First, in VirtualBox VM settings, select network, and ensure Win Server DC VM Internal NIC(adapter) and Win11 workstation VM adapter are in the same Internal network and have the same name(intnet in this case).<br/>
 <img src="https://imgur.com/XHH8omh.png" height="80%" width="80%" alt="Add Credential"/>
