@@ -30,12 +30,8 @@ The Diagram: <br/>
 
 
 <br/>The services we have on our Windows Server 2022 DC server manager: <br/>AD DC used to create users and Domain controller.<br/> <br/> DHCP with router function enabled to auto assign IP address to Win11 workstation.<br/>
-<br/>Remote Access Services (RAS) on Windows Server 2022 provides numerous benefits, especially for enterprises looking to manage network resources efficiently and provide secure remote connectivity: <br/>
-<br/>1, Windows Server 2022 supports VPN solutions like SSTP, PPTP, L2TP, and IKEv2. VPNs provide secure encrypted connections for remote users to access internal network resources from anywhere, ensuring data integrity and confidentiality.<br/>
-<br/>2, NAT (Network Address Translation) Facilitates the connection of multiple devices on a local network to the internet using a single public IP address, conserving address space and enhancing security by masking internal IP addresses. With this feature installed, our Windows 11 VM can communicate with the internet through our Windows Server 2022.<br/>
-<br/>3, Remote Access Services can provide advanced routing capabilities, enabling the server to manage network traffic efficiently. This is especially useful for multi-site enterprises where traffic needs to be directed appropriately.<br/>
-
-<img src="https://imgur.com/2DNteDn.png" height="80%" width="80%" alt="Add Credential"/>
+<br/>Remote Access Services (RAS) with NAT (Network Address Translation) enabled. Facilitates the connection of multiple devices on a local network to the internet using a single public IP address, conserving address space and enhancing security by masking internal IP addresses. With this feature installed, our Windows 11 Workstation can communicate with the Internet through our Windows Server 2022 DC.<br/>
+<img src="https://imgur.com/B8q0o09.png" height="80%" width="80%" alt="Add Credential"/>
 
 <br />PowerShell script for create users walk-through:<br />
 <img src="https://imgur.com/azpPcer.png" height="80%" width="80%" alt="Add New Host"/>
