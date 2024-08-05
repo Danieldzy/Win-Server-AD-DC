@@ -8,7 +8,7 @@ In a home lab environment, however, we have assigned two NICs to the DC (one int
 <p align="center">
 Diagram 1: <br/>
 <br/>
-<img src="https://imgur.com/Ph2loLY.png" height="80%" width="80%" alt=""/>
+<img src="https://imgur.com/BMkOZGQ.png" height="80%" width="80%" alt=""/>
 
 
 <h2>Overview</h2>
