@@ -6,7 +6,7 @@ Part 1: Create new users (_USERS OU) in Active Directory. Connect Windows 11 cli
 Part 2: TBD<br/>
 
 <h2>Part 1</h2>
-The project involves two virtual machines: Windows Server 2022 with two NIC (  ) and Windows 11 (Internal network access the internet using WIN server DC). 
+The project involves two virtual machines: Windows Server 2022 (DC) with two NICs (10.0.2.15 DHCP to Internet. 172.16.0.1 Static assigned) and Windows 11 (Internal network access to the Internet through DC RAS NAT configured). 
 <br />
 
 
@@ -25,7 +25,7 @@ The project involves two virtual machines: Windows Server 2022 with two NIC (  )
 
 <p align="center">
 The Diagram: <br/>
-<img src="https://imgur.com/HBmnFE4.png" height="80%" width="80%" alt=""/>
+<img src="https://imgur.com/Ud28rlo.png" height="80%" width="80%" alt=""/>
 
 
 
