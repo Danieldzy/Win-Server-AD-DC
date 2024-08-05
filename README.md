@@ -54,8 +54,8 @@ Diagram 2: <br/>
 <br />Install RAS(Remote access) services in Server Manager (use Add roles and features). Choose NAT(Network Address Translation), Make sure to select the DHCP NIC to finish the Wizard, so our workstation(Win11) can access the internet:<br />
 <img src="https://imgur.com/Nq6Jo59.png" height="80%" width="80%" alt="Add New Host"/>
 
-
-<br />PowerShell script for create users walk-through:<br />
+<br />
+<br />After setting up AD DC, DHCP and RAS services. Let's use PowerShell script for create users, the PowerShell scripts and name.txt can be downloaded from this repository. Open your PowerShell as an administrator (Note it is better to open the PowerShell in the same directory as your name.txt is stored, so it can fetch the document, if not, you need to assign the $PATH variable and point it to the name.txt file):<br />
 <img src="https://imgur.com/azpPcer.png" height="80%" width="80%" alt="Add New Host"/>
 <br />$PASSWORD_FOR_USERS = "Password1"<br />
 This line sets the variable $PASSWORD_FOR_USERS to the string "Password1". This means that the password "Password1" is now stored in this variable and can be used later in your script.<br />
