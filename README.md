@@ -8,7 +8,7 @@ In a real office environment, best practice dictates that a Domain Controller (D
 <p align="center">
 Diagram 1: <br/>
 <br/>
-<img src="https://imgur.com/BMkOZGQ.png" height="80%" width="80%" alt=""/>
+<img src="https://imgur.com/b94665x.png" height="80%" width="80%" alt=""/>
 
 
 <h2>Overview</h2>
