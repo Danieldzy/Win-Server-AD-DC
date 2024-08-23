@@ -1,4 +1,4 @@
-<h1>Windows Server Active Directory Management</h1>
+<h1>Windows Server Active Directory Management Home Lab</h1>
 
 <h2>Considerations</h2>
 In a real office environment, best practice suggests that a Domain Controller (DC) should have only one internal-facing network interface card (NIC) for security purposes. Furthermore, DCs and workstations should be placed on different subnets to enhance network isolation. Internet access should be routed through a proxy server and a firewall or router, ensuring the DC remains securely dedicated to its internal role.<br/>
